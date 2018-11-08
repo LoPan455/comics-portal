@@ -1,0 +1,120 @@
+GET http://gateway.marvel.com/v1/public/characters?ts=1540926966466&apikey=d886820a3bcacadd28b7d979ff3ad465&hash=db9ab2b68b0b7a705aec88723ea039fa&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-01T025501.200.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?ts=1540926966466&apikey=d886820a3bcacadd28b7d979ff3ad465&hash=db9ab2b68b0b7a705aec88723ea039fa&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-01T121856.200.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?ts=1540926966466&apikey=d886820a3bcacadd28b7d979ff3ad465&hash=db9ab2b68b0b7a705aec88723ea039fa&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-31T100912.200.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?ts=1540926966466&apikey=d886820a3bcacadd28b7d979ff3ad465&hash=db9ab2b68b0b7a705aec88723ea039fa
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-30T021706.200.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?ts=1540926966466&apikey=d886820a3bcacadd28b7d979ff3ad465&hash=db9ab2b68b0b7a705aec88723ea039fa?apikey=d886820a3bcacadd28b7d979ff3ad465
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-30T021650.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=1540926798880&hash=c8d485d5e60b98c1d0b33552fac2f9cf&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-30T021500.200.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=1540569926&hash=cbbe4f17f0cacf52f556856caaaf5597&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T110701.200.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=1540569926&hash=15405699269197cbda3bc2165a14e7f8e4d99e479f99f70c5dd886820a3bcacadd28b7d979ff3ad465&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T110636.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=29EE5F25BB6F6B80A296E248617FE0E4&hash=6c246a704185547568309508ce23e84a&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T104242.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=29EE5F25BB6F6B80A296E248617FE0E4&hash=ca641dbb08aa1534ec8783d415c7a0ab&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T103607.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=29EE5F25BB6F6B80A296E248617FE0E4&hash=857cc37a7a40a7e8ae936092667f414b&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T101444.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=29EE5F25BB6F6B80A296E248617FE0E4&hash=C0B3D638E9D4685D86EEA0F0B534F116&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T101259.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=29EE5F25BB6F6B80A296E248617FE0E4&hash=E68D76FDED278B9CD1142857AC8226C7&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T101228.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apikey=d886820a3bcacadd28b7d979ff3ad465&ts=1&hash=E68D76FDED278B9CD1142857AC8226C7&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T100720.401.json
+
+###
+
+GET http://gateway.marvel.com/v1/public/characters?apiKey=d886820a3bcacadd28b7d979ff3ad465&ts=1&hash=E68D76FDED278B9CD1142857AC8226C7&name=Spider-Man
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T100528.409.json
+
+###
+
