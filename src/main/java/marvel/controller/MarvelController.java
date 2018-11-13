@@ -1,20 +1,19 @@
 package marvel.controller;
 
-import marvel.marvelobjects.Hero;
-import marvel.service.CharacterService;
+import marvel.model.CharacterImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class HelloController
+public class MarvelController
 {
 
-	private final CharacterService characterService;
+	private final Character character;
 
 	@Autowired
-	public HelloController(CharacterService characterService){
-		this.characterService = characterService;
+	public MarvelController(Character character){
+		this.character = character;
 	}
 
 	@RequestMapping("/")
@@ -24,8 +23,8 @@ public class HelloController
 	}
 
 	@RequestMapping("/marvel")
-	public Hero getHero()
+	public CharacterImpl getHero()
 	{
-		return characterService.getHero("Spider-Man");
+		return character.getHero("Spider-Man");
 	}
 }

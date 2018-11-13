@@ -1,4 +1,4 @@
-package marvel.marvelobjects;
+package marvel.model;
 
 public class Villian implements Character
 {

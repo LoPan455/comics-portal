@@ -1,4 +1,4 @@
-package marvel.marvelobjects;
+package marvel.model;
 
 import org.springframework.boot.jackson.JsonComponent;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

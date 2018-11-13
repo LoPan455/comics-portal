@@ -1,11 +1,11 @@
-package marvel.marvelobjects;
+package marvel.model;
 
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Hero implements Character
+public class Character
 {
 	private int id;
 
@@ -17,20 +17,7 @@ public class Hero implements Character
 
 	private String resourceURI;
 
-	public Hero() {}
-
-	public Hero(String name) {
-		this.name = name;
-	}
-
-	public Hero(int id, String name, String description)	{
-
-		this.id = id;
-
-		this.name = name;
-
-		this.description = description;
-	}
+	public Character() {}
 
 	public int getId()
 	{
