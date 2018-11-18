@@ -17,9 +17,9 @@ public class ApiResponse
 
 	private String attributionHTML;
 
-	private String etag;
-
 	private Data data;
+
+	private String etag;
 
 	public ApiResponse() {
 
