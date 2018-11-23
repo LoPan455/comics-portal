@@ -1,9 +1,11 @@
-package marvel.model;
+package marvel.model.marvel;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.boot.jackson.JsonComponent;
 
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+@JsonComponent
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Character
 {
@@ -16,8 +18,6 @@ public class Character
 	private Date modified;
 
 	private String resourceURI;
-
-	public Character() {}
 
 	public int getId()
 	{
@@ -68,5 +68,4 @@ public class Character
 	{
 		this.resourceURI = resourceURI;
 	}
-
 }
