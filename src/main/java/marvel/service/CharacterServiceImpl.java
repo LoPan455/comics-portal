@@ -1,6 +1,6 @@
 package marvel.service;
 
-import marvel.model.ApiResponse;
+import marvel.model.CharacterApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -19,8 +19,8 @@ public class CharacterServiceImpl implements CharacterService
 	 * @return CharacterImpl returns an instantiated CharacterImpl object
 	 */
 	@Override
-	public ApiResponse getCharacter(String name) {
-		ApiResponse response = null;
+	public CharacterApiResponse getCharacter(String name) {
+		CharacterApiResponse response = null;
 		String authenticationString = authenticationGenerator.getAuthenticationString();
 		String parametersString = "name=" + name;
 		String requestString = "?" + authenticationString.join("&", authenticationString, parametersString);
@@ -38,9 +38,9 @@ public class CharacterServiceImpl implements CharacterService
 	 * @param requestString The request string to send to Marvel
 	 * @return apiResponse
 	 */
-	private ApiResponse makeCall(String requestString) {
+	private CharacterApiResponse makeCall(String requestString) {
 		RestTemplate restTemplate = new RestTemplate();
-		ApiResponse apiResponse = restTemplate.getForObject("http://gateway.marvel.com/v1/public/characters" + requestString, ApiResponse.class);
+		CharacterApiResponse apiResponse = restTemplate.getForObject("http://gateway.marvel.com/v1/public/characters" + requestString, CharacterApiResponse.class);
 		return apiResponse;
 
 	}

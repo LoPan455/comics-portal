@@ -8,7 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Service
-public class AuthenticationString implements AuthenticationGenerator
+public class AuthenticationGeneratorImpl implements AuthenticationGenerator
 {
 	@Value("${public-api-key}")
 	private String publicApiKey;
@@ -17,7 +17,6 @@ public class AuthenticationString implements AuthenticationGenerator
 	private String privateApiKey;
 
 	@Override
-	@Bean
 	public String getAuthenticationString()
 	{
 		String timeStamp = this.getTimeStamp();

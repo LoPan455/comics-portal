@@ -1,10 +1,11 @@
 package marvel.service;
 
-import marvel.model.ApiResponse;
+import marvel.model.CharacterApiResponse;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface CharacterService
 {
-	ApiResponse getCharacter(String name);
+	CharacterApiResponse getCharacter(String name);
+
 }

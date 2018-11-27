@@ -1,11 +1,6 @@
 package marvel.model;
 
-import org.springframework.boot.jackson.JsonComponent;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonComponent
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ApiResponse
+public class ComicApiResponse
 {
 	private int code;
 
@@ -17,7 +12,7 @@ public class ApiResponse
 
 	private String attributionHTML;
 
-	private CharacterDataContainer data;
+	private ComicDataContainer data;
 
 	private String etag;
 
@@ -31,7 +26,7 @@ public class ApiResponse
 		this.code = code;
 	}
 
-	public CharacterDataContainer getData()
+	public ComicDataContainer getData()
 	{
 		return data;
 	}
@@ -86,7 +81,7 @@ public class ApiResponse
 		this.etag = etag;
 	}
 
-	public void setData(CharacterDataContainer data)
+	public void setData(ComicDataContainer data)
 	{
 		this.data = data;
 	}
