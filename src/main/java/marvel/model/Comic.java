@@ -1,8 +1,10 @@
 package marvel.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 import org.springframework.boot.jackson.JsonComponent;
 
+@Data
 @JsonComponent
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Comic
@@ -13,17 +15,5 @@ public class Comic
 	private String resourceURI;
 
 	private String title;
-
-	public int getId() {
-		return id;
-	}
-
-	public String getResourceURI() {
-		return resourceURI;
-	}
-
-	public String getTitle() {
-		return title;
-	}
 
 }

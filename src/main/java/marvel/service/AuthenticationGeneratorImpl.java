@@ -1,13 +1,16 @@
 package marvel.service;
 
+import marvel.configuration.AppConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-@Service
+@Component
 public class AuthenticationGeneratorImpl implements AuthenticationGenerator
 {
 	@Value("${public-api-key}")
@@ -40,13 +43,9 @@ public class AuthenticationGeneratorImpl implements AuthenticationGenerator
 		{
 
 			MessageDigest md = MessageDigest.getInstance("MD5");
-
 			byte[] digest = md.digest(stringToHash.getBytes());
-
 			BigInteger number = new BigInteger(1, digest);
-
 			hashedString = number.toString(16);
-
 		}
 		catch (NoSuchAlgorithmException e)
 		{

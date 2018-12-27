@@ -2,10 +2,10 @@ package marvel.service;
 
 import marvel.model.ComicApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-@Service
+@Component
 public class ComicServiceImpl implements ComicService
 {
 	@Autowired
@@ -25,7 +25,8 @@ public class ComicServiceImpl implements ComicService
 	 */
 	private ComicApiResponse makeCall(String requestString) {
 		RestTemplate restTemplate = new RestTemplate();
-		ComicApiResponse comicResponse = restTemplate.getForObject("http://gateway.marvel.com/v1/public/comics?" + requestString, ComicApiResponse.class);
+		ComicApiResponse comicResponse = restTemplate.getForObject(
+				"http://gateway.marvel.com/v1/public/comics?" + requestString, ComicApiResponse.class);
 		return comicResponse;
 
 	}
