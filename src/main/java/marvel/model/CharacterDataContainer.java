@@ -1,11 +1,13 @@
-package marvel.marvelobjects;
+package marvel.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.boot.jackson.JsonComponent;
 
+import java.util.ArrayList;
+
 @JsonComponent
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Data
+public class CharacterDataContainer
 {
 	private int offset;
 
@@ -15,7 +17,7 @@ public class Data
 
 	private int count;
 
-	private Hero[] results;
+	private ArrayList<Character> results;
 
 	public int getOffset()
 	{
@@ -57,15 +59,11 @@ public class Data
 		this.count = count;
 	}
 
-	public Hero[] getResults()
-	{
+	public ArrayList<Character> getResults() {
 		return results;
 	}
 
-	public void setResults(Hero[] results)
-	{
+	public void setResults(ArrayList<Character> results) {
 		this.results = results;
 	}
-
-
 }

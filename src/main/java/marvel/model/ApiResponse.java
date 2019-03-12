@@ -1,4 +1,4 @@
-package marvel.marvelobjects;
+package marvel.model;
 
 import org.springframework.boot.jackson.JsonComponent;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ApiResponse
 {
-	private String code;
+	private int code;
 
 	private String status;
 
@@ -17,25 +17,21 @@ public class ApiResponse
 
 	private String attributionHTML;
 
+	private CharacterDataContainer data;
+
 	private String etag;
 
-	private Data data;
-
-	public ApiResponse() {
-
-	}
-
-	public String getCode()
+	public int getCode()
 	{
 		return code;
 	}
 
-	public void setCode(String code)
+	public void setCode(int code)
 	{
 		this.code = code;
 	}
 
-	public Data getData()
+	public CharacterDataContainer getData()
 	{
 		return data;
 	}
@@ -90,10 +86,12 @@ public class ApiResponse
 		this.etag = etag;
 	}
 
-	public void setData(Data data)
+	public void setData(CharacterDataContainer data)
 	{
 		this.data = data;
 	}
 
-
+	public String getCopyright() {
+		return copyright;
+	}
 }
