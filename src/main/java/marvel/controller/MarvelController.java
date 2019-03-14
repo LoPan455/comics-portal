@@ -1,6 +1,5 @@
 package marvel.controller;
 
-import marvel.model.ApiResponse;
 import marvel.service.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +19,9 @@ public class MarvelController
 	}
 
 	@RequestMapping("/marvel")
-	public ApiResponse getHero()
+	public String getHero()
 	{
-		return characterService.getCharacter("Spider-Man");
+		return characterService.getCharacter("Spider-Man").toString();
 	}
+
 }

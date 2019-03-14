@@ -8,7 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Service
-public class AuthenticationString implements AuthenticationGenerator
+public class AuthenticationStringImpl implements AuthenticationGenerator
 {
 	@Value("${public-api-key}")
 	private String publicApiKey;

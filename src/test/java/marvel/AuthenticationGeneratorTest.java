@@ -1,6 +1,6 @@
 package marvel;
 
-import marvel.service.AuthenticationString;
+import marvel.service.AuthenticationStringImpl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +15,7 @@ public class AuthenticationGeneratorTest
 {
 
 	@Autowired
-	AuthenticationString authenticationString;
+    AuthenticationStringImpl authenticationString;
 
 	@Test
 	public void testTimeStampGivesValidReturn() {

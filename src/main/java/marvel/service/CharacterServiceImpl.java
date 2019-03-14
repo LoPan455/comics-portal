@@ -1,10 +1,14 @@
 package marvel.service;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import marvel.model.ApiResponse;
+import marvel.model.Character;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 
 @Service
 public class CharacterServiceImpl implements CharacterService
@@ -19,29 +23,42 @@ public class CharacterServiceImpl implements CharacterService
 	 * @return CharacterImpl returns an instantiated CharacterImpl object
 	 */
 	@Override
-	public ApiResponse getCharacter(String name) {
-		ApiResponse response = null;
+	public String getCharacter(String name) {
+		String response = null;
 		String authenticationString = authenticationGenerator.getAuthenticationString();
+
+		// TODO Make a query parameter map to pass query params into a return a properly formatted query string
+
 		String parametersString = "name=" + name;
 		String requestString = "?" + authenticationString.join("&", authenticationString, parametersString);
-		try	{
-			response = this.makeCall(requestString);
-		}
-		catch (Exception e) {
-			System.out.println(e);
-		}
 
-		return response;
+		response = this.makeCall(requestString);
+
+		return extractCharacter(response);
+
 	}
 
 	/**
 	 * @param requestString The request string to send to Marvel
 	 * @return apiResponse
 	 */
-	private ApiResponse makeCall(String requestString) {
+	private String makeCall(String requestString) {
 		RestTemplate restTemplate = new RestTemplate();
-		ApiResponse apiResponse = restTemplate.getForObject("http://gateway.marvel.com/v1/public/characters" + requestString, ApiResponse.class);
+		String apiResponse = restTemplate.getForObject("http://gateway.marvel.com/v1/public/characters" + requestString, String.class);
 		return apiResponse;
+	}
+
+
+	private String extractCharacter(String apiResponse) throws IOException {
+		String result = "";
+		JsonNode characterNode = mapper.readTree(apiResponse);
+		Character character = new Character();
+		character.setMarvelApiId(characterNode.get("id").textValue());
+		character.setName(characterNode.get("name").textValue());
+		character.setDescription(characterNode.get("description").textValue());
+		character.setResourceURI(characterNode.get("resourceURI").textValue());
+
+		return character.toString();
 
 	}
 }

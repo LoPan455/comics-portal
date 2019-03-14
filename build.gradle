@@ -33,6 +33,7 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test")
     // end::tests[]
     compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile("com.fasterxml.jackson.core:jackson-databind:2.9.8")
     
 }
 

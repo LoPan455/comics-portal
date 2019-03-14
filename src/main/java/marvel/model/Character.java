@@ -4,12 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.boot.jackson.JsonComponent;
 
 import java.util.Date;
+import java.util.Objects;
 
 @JsonComponent
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Character
 {
-	private int id;
+	private String id;
+
+	private String marvelApiId;
 
 	private String name;
 
@@ -19,9 +22,13 @@ public class Character
 
 	private String resourceURI;
 
-	public int getId()
+	public String getId()
 	{
 		return id;
+	}
+
+	public String getMarvelApiId() {
+		return marvelApiId;
 	}
 
 	public String getName()
@@ -44,9 +51,13 @@ public class Character
 		return resourceURI;
 	}
 
-	public void setId(int id)
+	public void setId(String id)
 	{
 		this.id = id;
+	}
+
+	public void setMarvelApiId(String marvelApiId) {
+		this.marvelApiId = marvelApiId;
 	}
 
 	public void setName(String name)
@@ -67,5 +78,33 @@ public class Character
 	public void setResourceURI(String resourceURI)
 	{
 		this.resourceURI = resourceURI;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Character character = (Character) o;
+		return id == character.id &&
+				Objects.equals(name, character.name) &&
+				Objects.equals(description, character.description) &&
+				Objects.equals(modified, character.modified) &&
+				Objects.equals(resourceURI, character.resourceURI);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name, description, modified, resourceURI);
+	}
+
+	@Override
+	public String toString() {
+		return "Character{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", description='" + description + '\'' +
+				", modified=" + modified +
+				", resourceURI='" + resourceURI + '\'' +
+				'}';
 	}
 }
