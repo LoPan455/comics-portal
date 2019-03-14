@@ -23,7 +23,7 @@ public class CharacterServiceImpl implements CharacterService
 	 * @return CharacterImpl returns an instantiated CharacterImpl object
 	 */
 	@Override
-	public String getCharacter(String name) {
+	public String getCharacter(String name) throws IOException {
 		String response = null;
 		String authenticationString = authenticationGenerator.getAuthenticationString();
 
@@ -50,8 +50,8 @@ public class CharacterServiceImpl implements CharacterService
 
 
 	private String extractCharacter(String apiResponse) throws IOException {
-		String result = "";
-		JsonNode characterNode = mapper.readTree(apiResponse);
+		JsonNode characterNode = mapper.readTree(apiResponse).get("data").get("results").get(0);
+
 		Character character = new Character();
 		character.setMarvelApiId(characterNode.get("id").textValue());
 		character.setName(characterNode.get("name").textValue());
