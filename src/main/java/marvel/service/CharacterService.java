@@ -1,12 +1,11 @@
 package marvel.service;
 
-import marvel.model.ApiResponse;
+import java.io.IOException;
+import marvel.model.Character;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-
 @Service
-public interface CharacterService
-{
-	String getCharacter(String name) throws IOException;
+public interface CharacterService {
+
+  Character getCharacter(String name) throws IOException;
 }

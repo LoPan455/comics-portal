@@ -1,13 +1,16 @@
 package marvel.controller;
 
+import marvel.model.Character;
 import marvel.service.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
 @RestController
+@RequestMapping("/marvel")
 public class MarvelController
 {
 
@@ -20,9 +23,9 @@ public class MarvelController
 		return "Greetings from Spring Boot!\n";
 	}
 
-	@RequestMapping("/marvel")
-	public String getHero() throws IOException {
-		return characterService.getCharacter("Spider-Man");
+	@RequestMapping("/character")
+	public Character getCharacter(@RequestParam(name = "name") String character) throws IOException {
+		return characterService.getCharacter(character);
 	}
 
 }

@@ -1,7 +1,6 @@
 package marvel.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import marvel.model.ApiResponse;
 import marvel.model.Character;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +22,7 @@ public class CharacterServiceImpl implements CharacterService
 	 * @return CharacterImpl returns an instantiated CharacterImpl object
 	 */
 	@Override
-	public String getCharacter(String name) throws IOException {
+	public Character getCharacter(String name) throws IOException {
 		String response = null;
 		String authenticationString = authenticationGenerator.getAuthenticationString();
 
@@ -49,7 +48,7 @@ public class CharacterServiceImpl implements CharacterService
 	}
 
 
-	private String extractCharacter(String apiResponse) throws IOException {
+	private Character extractCharacter(String apiResponse) throws IOException {
 		JsonNode characterNode = mapper.readTree(apiResponse).get("data").get("results").get(0);
 
 		Character character = new Character();
@@ -58,7 +57,7 @@ public class CharacterServiceImpl implements CharacterService
 		character.setDescription(characterNode.get("description").textValue());
 		character.setResourceURI(characterNode.get("resourceURI").textValue());
 
-		return character.toString();
+		return character;
 
 	}
 }
