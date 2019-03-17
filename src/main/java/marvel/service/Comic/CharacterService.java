@@ -1,4 +1,4 @@
-package marvel.service;
+package marvel.service.Comic;
 
 import java.io.IOException;
 import marvel.model.Character;

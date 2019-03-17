@@ -1,7 +1,8 @@
-package marvel.service;
+package marvel.service.Comic;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import marvel.model.Character;
+import marvel.service.AuthenticationGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -52,7 +53,7 @@ public class CharacterServiceImpl implements CharacterService
 		JsonNode characterNode = mapper.readTree(apiResponse).get("data").get("results").get(0);
 
 		Character character = new Character();
-		character.setMarvelApiId(characterNode.get("id").textValue());
+		character.setMarvelApiId(characterNode.get("id").toString());
 		character.setName(characterNode.get("name").textValue());
 		character.setDescription(characterNode.get("description").textValue());
 		character.setResourceURI(characterNode.get("resourceURI").textValue());
