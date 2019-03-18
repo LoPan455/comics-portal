@@ -1,6 +1,7 @@
-package marvel.service.Comic;
+package marvel.service.Character;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import java.util.ArrayList;
 import marvel.model.Character;
 import marvel.service.AuthenticationGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,16 +24,14 @@ public class CharacterServiceImpl implements CharacterService
 	 * @return CharacterImpl returns an instantiated CharacterImpl object
 	 */
 	@Override
-	public Character getCharacter(String name) throws IOException {
-		String response = null;
+	public ArrayList<Character> getCharacter(String name) throws IOException {
+
 		String authenticationString = authenticationGenerator.getAuthenticationString();
-
 		// TODO Make a query parameter map to pass query params into a return a properly formatted query string
-
 		String parametersString = "name=" + name;
 		String requestString = "?" + authenticationString.join("&", authenticationString, parametersString);
 
-		response = this.makeCall(requestString);
+		String response = this.makeCall(requestString);
 
 		return extractCharacter(response);
 
@@ -49,16 +48,20 @@ public class CharacterServiceImpl implements CharacterService
 	}
 
 
-	private Character extractCharacter(String apiResponse) throws IOException {
-		JsonNode characterNode = mapper.readTree(apiResponse).get("data").get("results").get(0);
+	private ArrayList<Character> extractCharacter(String apiResponse) throws IOException {
+		JsonNode resultsNode = mapper.readTree(apiResponse).get("data").get("results");
+		ArrayList<Character> characters = new ArrayList<>();
 
-		Character character = new Character();
-		character.setMarvelApiId(characterNode.get("id").toString());
-		character.setName(characterNode.get("name").textValue());
-		character.setDescription(characterNode.get("description").textValue());
-		character.setResourceURI(characterNode.get("resourceURI").textValue());
+		for (JsonNode result : resultsNode) {
+			Character character = new Character();
+			character.setMarvelApiId(result.get("id").toString());
+			character.setName(result.get("name").textValue());
+			character.setDescription(result.get("description").textValue());
+			character.setResourceURI(result.get("resourceURI").textValue());
+			characters.add(character);
+		}
 
-		return character;
+		return characters;
 
 	}
 }

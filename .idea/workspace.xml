@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3d75ffb9-8381-4be5-8e18-0ad75cefb5f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/marvel/controller/MarvelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/marvel/service/CharacterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/marvel/service/CharacterServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/marvel/service/Comic/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/marvel/service/Comic/CharacterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -163,7 +167,7 @@
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="61" />
-          <entry key="java" value="1841" />
+          <entry key="java" value="2136" />
           <entry key="properties" value="38" />
           <entry key="txt" value="31" />
         </counts>
@@ -172,7 +176,7 @@
         <counts>
           <entry key="Git file" value="1" />
           <entry key="Groovy" value="61" />
-          <entry key="JAVA" value="1841" />
+          <entry key="JAVA" value="2136" />
           <entry key="PLAIN_TEXT" value="35" />
           <entry key="Properties" value="38" />
         </counts>
@@ -181,7 +185,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="1" />
-          <entry key="java" value="17" />
+          <entry key="java" value="20" />
           <entry key="properties" value="2" />
         </counts>
       </usages-collector>
@@ -189,7 +193,7 @@
         <counts>
           <entry key="Git file" value="1" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="20" />
           <entry key="Properties" value="2" />
         </counts>
       </usages-collector>
@@ -197,14 +201,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="246">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
                 <element signature="e#862#863#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Comic/ComicService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Comic/ComicServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#121#122#0" expanded="true" />
+                <element signature="e#142#143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,10 +261,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="220">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -246,10 +285,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/marvel/repository/CharacterRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -690,11 +729,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/hello/MyConfig.java" />
-        <option value="$PROJECT_DIR$/src/test/java/hello/HelloControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/MarvelObjects/Character.java" />
-        <option value="$PROJECT_DIR$/src/test/java/hello/CharacterTest.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" />
         <option value="$PROJECT_DIR$/src/main/java/hello/configuration/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Service/AuthenticationGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Service/AuthenticationGeneratorService.java" />
@@ -740,7 +774,12 @@
         <option value="$PROJECT_DIR$/src/main/java/marvel/model/Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/marvel/service/CharacterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/marvel/service/ComicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/marvel/service/ComicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/marvel/service/Comic/ComicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -806,6 +845,43 @@
               <item name="marvel" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="comics-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comics-portal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="marvel" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comics-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comics-portal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="marvel" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comics-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comics-portal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="marvel" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comics-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comics-portal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="marvel" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="Character" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -819,7 +895,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552856357687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552913381702" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1562,7 +1638,7 @@
     <frame x="-2560" y="23" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13820492" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13820492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1573,8 +1649,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31773585" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5109434" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.38339624" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5109434" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38339624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32981133" />
@@ -1661,41 +1737,27 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java</url>
           <line>36</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java</url>
-          <line>30</line>
+          <url>file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java</url>
+          <line>51</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java</url>
+          <line>33</line>
           <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.0.9.RELEASE/1cfee1c1857cda6542f478ef8fe7d2fdb6c3b20/spring-beans-5.0.9.RELEASE-sources.jar!/org/springframework/beans/factory/ListableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
     <entry file="file://$PROJECT_DIR$/src/test/java/hello/CharacterTest.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
@@ -1880,16 +1942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/repository/CharacterRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2112">
@@ -1975,26 +2027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/CharacterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/marvel/model/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
@@ -2007,13 +2039,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Comic/ComicService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Comic/ComicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/repository/CharacterRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/controller/MarvelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
             <element signature="e#862#863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/marvel/service/Character/CharacterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

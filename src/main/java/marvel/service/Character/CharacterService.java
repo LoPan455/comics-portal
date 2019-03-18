@@ -1,11 +1,12 @@
-package marvel.service.Comic;
+package marvel.service.Character;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import marvel.model.Character;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface CharacterService {
 
-  Character getCharacter(String name) throws IOException;
+  ArrayList<Character> getCharacter(String name) throws IOException;
 }

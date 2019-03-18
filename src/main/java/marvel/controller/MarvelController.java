@@ -1,7 +1,8 @@
 package marvel.controller;
 
+import java.util.ArrayList;
 import marvel.model.Character;
-import marvel.service.Comic.CharacterService;
+import marvel.service.Character.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,7 +25,7 @@ public class MarvelController
 	}
 
 	@RequestMapping("/character")
-	public Character getCharacter(@RequestParam(name = "name") String character) throws IOException {
+	public ArrayList<Character> getCharacter(@RequestParam(name = "name") String character) throws IOException {
 		return characterService.getCharacter(character);
 	}
 
