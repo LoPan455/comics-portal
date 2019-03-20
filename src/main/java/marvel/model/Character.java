@@ -1,13 +1,18 @@
 package marvel.model;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import org.springframework.boot.jackson.JsonComponent;
 
 import java.util.Date;
 import java.util.Objects;
 
 @JsonComponent
+@JsonInclude(Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonFilter("character-filter")
 public class Character
 {
 	private String id;

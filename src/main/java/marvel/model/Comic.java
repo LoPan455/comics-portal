@@ -18,31 +18,30 @@ public class Comic {
    */
   String title;
 
-  double issueNumber (double, optional): The number of the issue in the series (will generally be 0 for collection formats).,
+  double issueNumber;
 
-  String variantDescription (string, optional): If the issue is a variant (e.g. an alternate cover, second printing, or director’s cut), a text description of the variant.,
-  String description (string, optional): The preferred description of the comic.,
-  Date modified (Date, optional): The date the resource was most recently modified.,
-  String isbn (string, optional): The ISBN for the comic (generally only populated for collection formats).,
-  String upc (string, optional): The UPC barcode number for the comic (generally only populated for periodical formats).,
-  String diamondCode (string, optional): The Diamond code for the comic.,
-  String ean (string, optional): The EAN barcode for the comic.,
-  String issn (string, optional): The ISSN barcode for the comic.,
-  String format (string, optional): The publication format of the comic e.g. comic, hardcover, trade paperback.,
-  int pageCount (int, optional): The number of story pages in the comic.,
-  ArrayList<String> textObjects (Array[TextObject], optional): A set of descriptive text blurbs for the comic.,
-  String resourceURI (string, optional): The canonical URL identifier for this resource.,
-  ArrayList<URL> urls (Array[Url], optional): A set of public web site URLs for the resource.,
-  SeriesSummary series (SeriesSummary, optional): A summary representation of the series to which this comic belongs.,
-  ArrayList<ComicSummary> variants (Array[ComicSummary], optional): A list of variant issues for this comic (includes the "original" issue if the current issue is a variant).,
-  ArrayList<ComicSummary> collections (Array[ComicSummary], optional): A list of collections which include this comic (will generally be empty if the comic's format is a collection).,
-      collectedIssues (Array[ComicSummary], optional): A list of issues collected in this comic (will generally be empty for periodical formats such as "comic" or "magazine").,
-  ArrayList<ComicDate> (Array[ComicDate], optional): A list of key dates for this comic.,
-
-  Image thumbnail (Image, optional): The representative image for this comic.,
-  ArrayList<Images> (Array[Image], optional): A list of promotional images associated with this comic.,
-  CreatorList creators (CreatorList, optional): A resource list containing the creators associated with this comic.,
-  CharacterList characters (CharacterList, optional): A resource list containing the characters which appear in this comic.,
-  StoryList stories (StoryList, optional): A resource list containing the stories which appear in this comic.,
-  EventList events (EventList, optional): A resource list containing the events in which this comic appears.
+  String variantDescription;
+  String description;
+//  Date modified;
+  String isbn;
+  String upc;
+  String diamondCode;
+  String ean;
+  String issn;
+  String format;
+  int pageCount;
+  ArrayList<String> textObjects;
+  String resourceURI;
+  ArrayList<URL> urls;
+//  SeriesSummary series;
+//  ArrayList<ComicSummary> variants;
+//  ArrayList<ComicSummary> collections;
+//  ArrayList<ComicSummary> collectedIssues;
+//  ArrayList<ComicDate> keyDates;
+  Image thumbnail;
+  ArrayList<Image> promoImages;
+//  CreatorList creators;
+//  CharacterList characters;
+//  StoryList stories;
+//  EventList events;
 }
