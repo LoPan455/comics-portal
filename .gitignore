@@ -2,3 +2,5 @@ application.properties
 .idea
 build
 .gradle
+/out/
+/build/
