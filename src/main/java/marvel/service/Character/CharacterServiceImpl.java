@@ -3,6 +3,7 @@ package marvel.service.Character;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 import marvel.model.Character;
+import marvel.repository.CharacterRepository;
 import marvel.service.AuthenticationGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,10 @@ public class CharacterServiceImpl implements CharacterService
 {
 	@Autowired
 	AuthenticationGenerator authenticationGenerator;
+
+	@Autowired
+  CharacterRepository characterRepository;
+
 
 	ObjectMapper mapper = new ObjectMapper();
 
@@ -59,6 +64,7 @@ public class CharacterServiceImpl implements CharacterService
 			character.setDescription(result.get("description").textValue());
 			character.setResourceURI(result.get("resourceURI").textValue());
 			characters.add(character);
+			characterRepository.save(character);
 		}
 
 		return characters;

@@ -41,9 +41,6 @@ public class MarvelController
 
 		ObjectMapper mapper = new ObjectMapper();
 		FilterProvider filter = new SimpleFilterProvider().addFilter("character-filter", SimpleBeanPropertyFilter.filterOutAllExcept("name", "resourceURI"));
-//		filter.addFilter("characterFilter", SimpleBeanPropertyFilter.filterOutAllExcept("name", "resourceURI"));
-//		filter.addFilter(
-//				"character-filter", SimpleBeanPropertyFilter.filterOutAllExcept("name", "resourceURI"));
 		mapper.setFilterProvider(filter);
 		for (Character unfilteredCharacters : characters) {
 			returnString += mapper.writer(filter).writeValueAsString(unfilteredCharacters);

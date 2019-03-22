@@ -8,6 +8,7 @@ import org.springframework.boot.jackson.JsonComponent;
 
 import java.util.Date;
 import java.util.Objects;
+import org.springframework.data.annotation.Id;
 
 @JsonComponent
 @JsonInclude(Include.NON_EMPTY)
@@ -15,6 +16,7 @@ import java.util.Objects;
 @JsonFilter("character-filter")
 public class Character
 {
+	@Id
 	private String id;
 
 	private String marvelApiId;
