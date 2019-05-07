@@ -70,4 +70,6 @@ public class CharacterServiceImpl implements CharacterService
 		return characters;
 
 	}
+
+
 }

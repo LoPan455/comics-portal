@@ -49,7 +49,7 @@ public class MarvelController
 		return returnString;
 	}
 
-	@RequestMapping("/comics")
+	@GetMapping(value = "/comics", produces = MediaType.APPLICATION_JSON_VALUE)
 	public String getComic() {
 		return "Here is your comic";
 	}

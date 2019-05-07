@@ -9,109 +9,107 @@ import org.springframework.boot.jackson.JsonComponent;
 import java.util.Date;
 import java.util.Objects;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @JsonComponent
 @JsonInclude(Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonFilter("character-filter")
-public class Character
-{
-	@Id
-	private String id;
+@Document(collection = Character.COLLECTION)
+public class Character {
 
-	private String marvelApiId;
+  public static final String COLLECTION = "character";
 
-	private String name;
+  @Id
+  private String id;
 
-	private String description;
+  private String marvelApiId;
 
-	private Date modified;
+  private String name;
 
-	private String resourceURI;
+  private String description;
 
-	public String getId()
-	{
-		return id;
-	}
+  private Date modified;
 
-	public String getMarvelApiId() {
-		return marvelApiId;
-	}
+  private String resourceURI;
 
-	public String getName()
-	{
-		return name;
-	}
+  public String getId() {
+    return id;
+  }
 
-	public String getDescription()
-	{
-		return description;
-	}
+  public String getMarvelApiId() {
+    return marvelApiId;
+  }
 
-	public Date getModified()
-	{
-		return modified;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public String getResourceURI()
-	{
-		return resourceURI;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public void setId(String id)
-	{
-		this.id = id;
-	}
+  public Date getModified() {
+    return modified;
+  }
 
-	public void setMarvelApiId(String marvelApiId) {
-		this.marvelApiId = marvelApiId;
-	}
+  public String getResourceURI() {
+    return resourceURI;
+  }
 
-	public void setName(String name)
-	{
-		this.name = name;
-	}
+  public void setId(String id) {
+    this.id = id;
+  }
 
-	public void setDescription(String description)
-	{
-		this.description = description;
-	}
+  public void setMarvelApiId(String marvelApiId) {
+    this.marvelApiId = marvelApiId;
+  }
 
-	public void setModified(Date date)
-	{
-		this.modified = date;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setResourceURI(String resourceURI)
-	{
-		this.resourceURI = resourceURI;
-	}
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Character character = (Character) o;
-		return id == character.id &&
-				Objects.equals(name, character.name) &&
-				Objects.equals(description, character.description) &&
-				Objects.equals(modified, character.modified) &&
-				Objects.equals(resourceURI, character.resourceURI);
-	}
+  public void setModified(Date date) {
+    this.modified = date;
+  }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, name, description, modified, resourceURI);
-	}
+  public void setResourceURI(String resourceURI) {
+    this.resourceURI = resourceURI;
+  }
 
-	@Override
-	public String toString() {
-		return "Character{" +
-				"id=" + id +
-				", name='" + name + '\'' +
-				", description='" + description + '\'' +
-				", modified=" + modified +
-				", resourceURI='" + resourceURI + '\'' +
-				'}';
-	}
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Character character = (Character) o;
+    return id == character.id &&
+        Objects.equals(name, character.name) &&
+        Objects.equals(description, character.description) &&
+        Objects.equals(modified, character.modified) &&
+        Objects.equals(resourceURI, character.resourceURI);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, name, description, modified, resourceURI);
+  }
+
+  @Override
+  public String toString() {
+    return "Character{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", description='" + description + '\'' +
+        ", modified=" + modified +
+        ", resourceURI='" + resourceURI + '\'' +
+        '}';
+  }
 }
