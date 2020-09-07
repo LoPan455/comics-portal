@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MarvelController
 {
 
-	@Autowired
-	public CharacterService characterService;
+//	@Autowired
+//	public CharacterService characterService;
 
 	@RequestMapping("/")
 	public String index()
@@ -19,9 +19,9 @@ public class MarvelController
 		return "Greetings from Spring Boot!\n";
 	}
 
-	@RequestMapping("/marvel")
-	public ApiResponse getHero()
-	{
-		return characterService.getCharacter("Spider-Man");
-	}
+//	@RequestMapping("/marvel")
+//	public ApiResponse getHero()
+//	{
+////		return characterService.getCharacter("Spider-Man");
+//	}
 }

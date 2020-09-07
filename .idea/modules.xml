@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/comics-portal.iml" filepath="$PROJECT_DIR$/.idea/modules/comics-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/comics-portal.main.iml" filepath="$PROJECT_DIR$/.idea/modules/comics-portal.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/comics-portal.test.iml" filepath="$PROJECT_DIR$/.idea/modules/comics-portal.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/comics-portal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/comics-portal_main.iml" group="comics-portal" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/comics-portal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/comics-portal_test.iml" group="comics-portal" />
     </modules>

@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.7.RELEASE")
     }
 }
 
@@ -32,6 +32,8 @@ dependencies {
     // tag::tests[]
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
     // end::tests[]
 }
 

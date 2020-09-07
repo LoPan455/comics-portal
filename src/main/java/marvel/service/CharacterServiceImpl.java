@@ -7,41 +7,43 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
-public class CharacterServiceImpl implements CharacterService
-{
-	@Autowired
-	AuthenticationGenerator authenticationGenerator;
+public class CharacterServiceImpl  {
 
-	ObjectMapper mapper = new ObjectMapper();
+//  @Autowired
+//  AuthenticationGenerator authenticationGenerator;
 
-	/**
-	 * @param name This is the description
-	 * @return CharacterImpl returns an instantiated CharacterImpl object
-	 */
-	@Override
-	public ApiResponse getCharacter(String name) {
-		ApiResponse response = null;
-		String authenticationString = authenticationGenerator.getAuthenticationString();
-		String parametersString = "name=" + name;
-		String requestString = "?" + authenticationString.join("&", authenticationString, parametersString);
-		try	{
-			response = this.makeCall(requestString);
-		}
-		catch (Exception e) {
-			System.out.println(e);
-		}
+  ObjectMapper mapper = new ObjectMapper();
 
-		return response;
-	}
+  /**
+   * @param name This is the description
+   * @return CharacterImpl returns an instantiated CharacterImpl object
+   */
+//  @Override
+//  public ApiResponse getCharacter(String name) {
+//    ApiResponse response = null;
+//    String authenticationString = authenticationGenerator.getAuthenticationString();
+//    String parametersString = "name=" + name;
+//    String requestString =
+//        "?" + authenticationString.join("&", authenticationString, parametersString);
+//    try {
+//      response = this.makeCall(requestString);
+//    } catch (Exception e) {
+//      System.out.println(e);
+//    }
+//
+//    return response;
+//  }
 
-	/**
-	 * @param requestString The request string to send to Marvel
-	 * @return apiResponse
-	 */
-	private ApiResponse makeCall(String requestString) {
-		RestTemplate restTemplate = new RestTemplate();
-		ApiResponse apiResponse = restTemplate.getForObject("http://gateway.marvel.com/v1/public/characters" + requestString, ApiResponse.class);
-		return apiResponse;
+  /**
+   * @param requestString The request string to send to Marvel
+   * @return apiResponse
+   */
+  private ApiResponse makeCall(String requestString) {
+    RestTemplate restTemplate = new RestTemplate();
+    ApiResponse apiResponse = restTemplate
+        .getForObject("http://gateway.marvel.com/v1/public/characters" + requestString,
+            ApiResponse.class);
+    return apiResponse;
 
-	}
+  }
 }

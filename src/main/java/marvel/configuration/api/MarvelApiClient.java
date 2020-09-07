@@ -3,36 +3,38 @@ package marvel.configuration.api;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import javax.annotation.PostConstruct;
 import marvel.configuration.property.MarvelProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class MarvelApiClient {
 
-  String publicApiKey;
-  String privateApiKey;
+  MarvelProperties properties;
 
-  public MarvelApiClient(MarvelProperties properties) {
-    this.publicApiKey = properties.publicApiKey;
-    this.privateApiKey = properties.publicApiKey;
+  MarvelApiClient(MarvelProperties properties) {
+    this.properties = properties;
   }
 
   @Bean
-  public RestTemplate marvelApiClient() {
+  public RestTemplate client() {
     RestTemplateBuilder builder = new RestTemplateBuilder();
-    builder.rootUri("https://gateway.marvel.com/v1/public");
+    builder.rootUri(properties.baseUrl);
     return builder.build();
   }
 
-
   @Bean
-  public String auth() {
+  public String marvelAuth() {
+    System.out.println(properties.privateApiKey);
+    System.out.println(properties.publicApiKey);
     String timeStamp = getTimeStamp();
-    String hash = "hash=" + getHash(timeStamp, privateApiKey, publicApiKey);
-    String apiKey = "apikey=" + publicApiKey;
+    String hash = "hash=" + getHash(timeStamp, properties.privateApiKey, properties.publicApiKey);
+    String apiKey = "apikey=" + properties.publicApiKey;
     return String.join("&", "ts=" + timeStamp, apiKey, hash);
   }
 
